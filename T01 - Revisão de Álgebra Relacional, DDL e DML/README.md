@@ -1,4 +1,4 @@
-## T01 - Revisão de Álgebra Relacional, DDL e DML
+## Tarefa 01 - Revisão de Álgebra Relacional, DDL e DML
 
 * EMPREGADO (cod_empregado, nome_empregado, rua, cidade, salario)
 * TRABALHA (__**cod_empregado,  cod_companhia**__)
