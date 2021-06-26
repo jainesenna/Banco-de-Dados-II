@@ -34,3 +34,15 @@ WHERE E.cod_empregado IN (
 		WHERE C.nome_companhia LIKE 'Soft Sell')
 		AND E.salario > '10.000'
 );
+
+-- 4) Encontre os nomes de todos os empregados, no banco de dados, 
+-- que moram na mesma cidade da companhia em que trabalham.
+SELECT E.nome_empregado
+FROM EMPREGADO E
+WHERE E.cod_empregado IN (	
+	SELECT T.cod_empregado
+	FROM TRABALHA T
+	WHERE T.cod_companhia IN (SELECT C.cod_companhia
+	FROM COMPANHIA C
+	WHERE E.cidade = C.cidade_companhia)
+);
