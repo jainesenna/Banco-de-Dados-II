@@ -1,8 +1,8 @@
 ## Tarefa 01 - Revisão de Álgebra Relacional, DDL e DML
 
-* EMPREGADO (cod_empregado, nome_empregado, rua, cidade, salario)
+* EMPREGADO (**cod_empregado**, nome_empregado, rua, cidade, salario)
 * TRABALHA (__**cod_empregado,  cod_companhia**__)
-* COMPANHIA (cod_companhia, CNPJ, nome_companhia, cidade_companhia)
+* COMPANHIA (**cod_companhia**, CNPJ, nome_companhia, cidade_companhia)
 * GERENTE(__**cod_empregado, cod_companhia**__)
 
 1. Encontre os nomes de todos os empregados que trabalham para a Companhia Soft Sell.
