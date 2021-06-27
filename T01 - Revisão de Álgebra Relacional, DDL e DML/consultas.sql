@@ -37,7 +37,7 @@ WHERE E.cod_empregado IN (
 
 -- 4) Encontre os nomes de todos os empregados, no banco de dados, 
 -- que moram na mesma cidade da companhia em que trabalham.
-SELECT E.nome_empregado
+SELECT DISTINCT E.nome_empregado
 FROM EMPREGADO E
 WHERE E.cod_empregado IN (	
 	SELECT T.cod_empregado
@@ -49,7 +49,7 @@ WHERE E.cod_empregado IN (
 
 -- 5) Encontre os nomes de todos os empregados que moram na mesma cidade 
 -- e rua de seu gerente.
-SELECT E.nome_empregado
+SELECT DISTINCT E.nome_empregado
 FROM EMPREGADO E JOIN TRABALHA T 
 ON E.cod_empregado = T.cod_empregado LEFT JOIN GERENTE G
 ON E.cod_empregado = G.cod_empregado
