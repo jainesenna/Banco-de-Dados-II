@@ -23,6 +23,7 @@ CREATE TABLE COMPANHIA (
 CREATE TABLE TRABALHA (
 	cod_empregado int DEFAULT NULL,
 	cod_companhia int DEFAULT NULL,
+	PRIMARY KEY (cod_empregado, cod_companhia),
 	FOREIGN KEY (cod_empregado) 
 	REFERENCES EMPREGADO(cod_empregado) 
 	ON DELETE SET NULL,
@@ -34,6 +35,7 @@ CREATE TABLE TRABALHA (
 CREATE TABLE GERENTE(
 	cod_empregado int DEFAULT NULL,
 	cod_companhia int DEFAULT NULL,
+	PRIMARY KEY (cod_empregado, cod_companhia),
 	FOREIGN KEY (cod_empregado) 
 	REFERENCES EMPREGADO(cod_empregado) 
 	ON DELETE SET NULL,
