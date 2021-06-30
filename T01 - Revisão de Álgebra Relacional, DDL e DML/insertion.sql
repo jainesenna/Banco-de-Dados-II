@@ -14,10 +14,10 @@ INSERT INTO EMPREGADO (cod_empregado, nome_empregado, rua, cidade, salario)
 VALUES ('5', 'Lucas Melo', 'Rua Abelardo Meirao', 'Acari', 8.000);
 
 INSERT INTO COMPANHIA (cod_companhia, CNPJ, nome_companhia, cidade_companhia)
-VALUES ('1', '123456789012345', 'Soft Sell', 'Caicó');
+VALUES ('1', '12345678901234', 'Soft Sell', 'Caicó');
 
 INSERT INTO COMPANHIA (cod_companhia, CNPJ, nome_companhia, cidade_companhia)
-VALUES ('2', '123456789012223', 'JJ LTDA', 'Floripa');
+VALUES ('2', '12345678901222', 'JJ LTDA', 'Floripa');
 
 INSERT INTO TRABALHA (cod_empregado, cod_companhia)
 VALUES ('1', '1');
