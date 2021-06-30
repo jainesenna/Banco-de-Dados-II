@@ -9,7 +9,7 @@ CREATE TABLE EMPREGADO (
 	rua VARCHAR(100) NOT NULL, 
 	cidade VARCHAR(100) NOT NULL, 
 	salario REAL NOT NULL,
-  	PRIMARY KEY (cod_empregado)
+  PRIMARY KEY (cod_empregado)
 );
 
 CREATE TABLE COMPANHIA (
@@ -24,10 +24,10 @@ CREATE TABLE COMPANHIA (
 CREATE TABLE TRABALHA (
 	cod_empregado int DEFAULT NULL,
 	cod_companhia int DEFAULT NULL,
-    FOREIGN KEY (cod_empregado) 
+  FOREIGN KEY (cod_empregado) 
 	REFERENCES EMPREGADO(cod_empregado) 
 	ON DELETE SET NULL,
-  	FOREIGN KEY (cod_companhia) 
+  FOREIGN KEY (cod_companhia) 
 	REFERENCES COMPANHIA(cod_companhia) 
 	ON DELETE SET NULL
 );
@@ -35,7 +35,7 @@ CREATE TABLE TRABALHA (
 CREATE TABLE GERENTE(
 	cod_empregado int DEFAULT NULL,
 	cod_companhia int DEFAULT NULL,
-  	FOREIGN KEY (cod_empregado) 
+  FOREIGN KEY (cod_empregado) 
 	REFERENCES EMPREGADO(cod_empregado) 
 	ON DELETE SET NULL,
 	FOREIGN KEY (cod_companhia) 
